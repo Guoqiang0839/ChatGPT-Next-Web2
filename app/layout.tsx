@@ -39,3 +39,31 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const handleGenerateNote = () => {
+    // 后续实现生成笔记的逻辑
+    console.log('生成笔记的功能尚未实现');
+  };
+
+  return (
+    <html lang="en">
+      <head>
+        {/* 现有的 head 内容 */}
+      </head>
+      <body>
+        {children}
+        <div style={{ position: 'fixed', bottom: 20, right: 20 }}>
+          <button onClick={handleGenerateNote} style={{ padding: '10px 20px' }}>
+            生成笔记
+          </button>
+        </div>
+      </body>
+    </html>
+  );
+}
+
