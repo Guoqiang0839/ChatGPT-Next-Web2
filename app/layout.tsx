@@ -46,8 +46,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const handleGenerateNote = () => {
-    // 后续实现生成笔记的逻辑
-    console.log('生成笔记的功能尚未实现');
+    const chatHistory = getChatHistory(); // 获取聊天记录的函数
+    sendChatHistoryToBackend(chatHistory); // 发送聊天记录到后端
+    
   };
 
   return (
